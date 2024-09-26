@@ -8,6 +8,7 @@ export default function Login() {
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
   const router = useRouter();
+  const { data: session, status } = useSession();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
